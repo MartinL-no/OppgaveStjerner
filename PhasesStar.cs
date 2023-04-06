@@ -2,7 +2,7 @@
 
 namespace ConsoleStars
 {
-    public class PhasesStar
+    public class PhasesStar : IStar
     {
         private const string _phaseChars = " .x*x.";
         protected int _x;

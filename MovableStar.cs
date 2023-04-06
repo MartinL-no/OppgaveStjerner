@@ -2,7 +2,7 @@
 
 namespace ConsoleStars
 {
-    public class MovableStar 
+    public class MovableStar : IStar
     {
         protected int _x;
         protected int _y;

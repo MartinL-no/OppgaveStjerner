@@ -15,12 +15,13 @@ namespace ConsoleStars
             star.Update();
         }
      */
+
     class Program
     {      
         static void Main(string[] args)
         {
             var random = new Random();
-            var stars = new object[]
+            var stars = new IStar[]
             {
                 new PhasesStar(random),
                 new PhasesStar(random),
@@ -34,18 +35,8 @@ namespace ConsoleStars
                 Console.Clear();     
                 foreach (var star in stars)
                 {
-                    if (star is PhasesStar)
-                    {
-                        var phasesStar = (PhasesStar)star;
-                        phasesStar.Show();
-                        phasesStar.Update();
-                    }
-                    else if (star is MovableStar)
-                    {
-                        var phasesStar = (MovableStar)star;
-                        phasesStar.Show();
-                        phasesStar.Update();
-                    }
+                    star.Show();
+                    star.Update();
                 }
                 Console.CursorLeft = 0;
                 Console.CursorTop = 0;
